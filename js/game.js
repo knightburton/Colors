@@ -1,7 +1,7 @@
 $(function() {
 	var base = {
 		number_of_hexagons: 6,
-		percentage_difference: 0.03,
+		percentage_difference: 0.04,
 		color_m: null,
 		hexagons: new Array(),
 		status: -1,
