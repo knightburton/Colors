@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A little fun with colors.">
+    <meta name="author" content="Imre Kiss - KnightBurton">
+
+    <!-- OG meta information -->
+    <meta property="og:image" content="http://knightburton.github.io/img/og-image.jpg">
+    <meta property="og:description" content="A little fun with colors.">
+    <meta property="og:title" content="#Colors">
+    <meta property="og:url" content="http://knightburton.github.io/Colors">
+    <meta property="og:type" content="website">
+
+    <title>#Colors</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.ico" sizes="32x32" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link href="css/colors.css" rel="stylesheet">
+
+    <!-- Open Sans Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top z-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="brand-nav-button" id="game-nav-button">
+                    <span class="pure red">CO</span><span class="pure green">LO</span><span class="pure blue">RS</span>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <span id="howto-nav-button" class="nav-button">How to...</span>
+                    </li>
+                    <li>
+                        <span id="rounds-nav-button" class="nav-button">#######</a>
+                    </li>
+                    <li>
+                        <span id="about-nav-button" class="nav-button">About</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container white-text" id="game-section">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <hgroup id="content-headers">
+                    <div class="left">
+                        <h2>ROUND</h2>
+                        <h2 class="pure" id="round-stat">0</h2>
+                    </div>
+                    <div class="actions white-text" id="pause-action">
+                        <i class="fa fa-pause" aria-hidden="true"></i><span>Pause</span>
+                    </div>
+                    <div class="right">
+                        <h2>STOPWATCH</h2>
+                        <h2 class="pure" id="stopwatch-stat">0</h2>
+                    </div>
+                </hgroup>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div id="hexagons">
+                    <div id="hexagon-0" class="hexagon">
+                        <span class="hexagon-shadow-cover"></span>
+                        <div id="hexagon-1" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                        <div id="hexagon-2" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                        <div id="hexagon-3" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                        <div id="hexagon-4" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                        <div id="hexagon-5" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                        <div id="hexagon-6" class="inner-hexagon hexagon clickable">
+                            <span class="hexagon-shadow-cover"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container white-text info-container" id="howto-section">
+        <div class="row" >
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>This is a tricky one... to your eyes</p>
+                <p>There is a hexagon in the middle of the screen, it's sorrounded by another six.</p>
+                <p>You have to find that one (out of six) which has the same color as the middle one.</p>
+                <p>If your choise is good then... next round.</p>
+                <p>If your choise isn't good enough and you picked a wrong hexagon ... you know ... the game is over.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <div class="container white-text info-container" id="rounds-section">
+        <div class="row" >
+            <div class="col-lg-12">
+                <table class="info-table" id="rounds-table">
+                  <tr>
+                    <td>Round</td>
+                    <td>Second</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <div class="container white-text info-container" id="about-section">
+        <div class="row" >
+            <div class="col-lg-12">
+                <table class="info-table">
+                  <tr>
+                    <td><i class="fa fa-hashtag" aria-hidden="true"></i></td>
+                    <td>Name:</td>
+                    <td>#Colors</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-code-fork" aria-hidden="true"></i></td>
+                    <td>Version:</td>
+                    <td>0.9.0</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-github" aria-hidden="true"></i></td>
+                    <td>Code:</td>
+                    <td><a href="https://github.com/knightburton/Colors" target="_blank">https://github.com/knightburton/Colors</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-picture-o" aria-hidden="true"></i></td>
+                    <td>Background:</td>
+                    <td><a href="https://alpha.wallhaven.cc/wallpaper/11166" target="_blank">Wallhaven</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-font" aria-hidden="true"></i></td>
+                    <td>Font:</td>
+                    <td><a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-font-awesome" aria-hidden="true"></i></td>
+                    <td>Iconic font:</td>
+                    <td><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Modal layer-->
+    <div class="modal-layer" id="main-modal">
+        <div class="actions white-text" id="play-action">
+            <i class="fa fa-play" aria-hidden="true"></i><br><span>Play</span>
+        </div>
+        <div class="actions white-text" id="continue-action">
+            <i class="fa fa-angle-double-down" aria-hidden="true"></i><br><span>Continue</span>
+        </div>
+        <div class="actions white-text" id="try-again-action">
+            <h2 class="pure">Boom!</h2>
+            <i class="fa fa-repeat" aria-hidden="true"></i><br><span>Try again</span>
+        </div>
+    </div>
+    <!-- /.modal-layer-->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Taffy.DB -->
+    <script src="js/taffy.js"></script>
+
+    <!-- Stopwatch Core JavaScript -->
+    <script src="js/stopwatch.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Core JavaScript -->
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
