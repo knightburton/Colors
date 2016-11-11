@@ -231,13 +231,11 @@ $(function() {
 		set_modal(true);
 		set_content_block_blur(content_blocks.hexagons, true);
 
-
-
 		db.insert({round: stat.round_counter, second: stat.stopwatch.get()});
-        if(db().count() > 32) {
-            db().order("round desc").last().remove();
+        if(db().count() > 20) {
+        	var id = db().order("round desc").last()['___id']
+            db({___id: id}).remove();
         }
-        db.store("colors-rounds");
 	}
 
 	/**
@@ -265,7 +263,7 @@ $(function() {
 		}
 
 		if(section == sections.rounds) {
-			console.log("works");
+			$('#rounds-table-content').empty();
 			db().order("round desc").each(function (record, recordnumber) {
                 var round_td = $('<td>' + record["round"] + '</td>');
 
@@ -280,7 +278,7 @@ $(function() {
                 
                 var row = $('<tr></tr>').append(round_td).append(second_td);
 
-                $('#rounds-table').append(row);
+                $('#rounds-table-content').append(row);
             });
 		}
 	}
