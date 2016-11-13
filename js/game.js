@@ -1,7 +1,7 @@
 $(function() {
 	var base = {
 		number_of_hexagons: 6,
-		percentage_difference: 0.04,
+		percentage_difference: 0.05,
 		color_m: null,
 		hexagons: new Array(),
 		status: -1,
@@ -174,6 +174,10 @@ $(function() {
 			stat.round_counter = 0;
 		} else {
 			stat.round_counter++;
+		}
+
+		if(stat.round_counter % 10 == 1 && base.percentage_difference > 0.025) {
+			base.percentage_difference -= 0.005;
 		}
 
 		$('#round-stat').html(stat.round_counter);
