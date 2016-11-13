@@ -172,6 +172,7 @@ $(function() {
 
 		if(reset) {
 			stat.round_counter = 0;
+			base.percentage_difference = 0.05;
 		} else {
 			stat.round_counter++;
 		}
