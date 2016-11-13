@@ -241,10 +241,6 @@ body {
 	-webkit-transition: opacity .25s ease-in-out;
 }
 
-.clickable:hover {
-	opacity: 0.5;
-}
-
 .inner-hexagon {
 	width: 100% !important;
 	height: 100% !important;
